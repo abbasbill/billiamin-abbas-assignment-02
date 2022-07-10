@@ -14,9 +14,14 @@ const assignment = {};
  * @returns number the sum of the numbers
  */
 function sumOfNumbers(arrayOfNumbers) {
-    return arrayOfNumbers.length;
+  
+    return arrayOfNumbers.reduce((i, j) => i + j, 0);
+  
+//Where the reduce() method takes two arguments: a callback function "(i, j) => i + j" and an optional initial value "0". If an initial value is provided, reduce() calls the "reducer" callback function on each element in the array, in order. If no initial value is provided, reduce() calls the callback function on each element in the array after the first element.
+// reduce() returns the value that is returned from the callback function on the final iteration of the array.
+
 }
-// assignment.sumOfNumbers = sumOfNumbers;
+assignment.sumOfNumbers = sumOfNumbers;
 
 /**
  * Challenge - 2
@@ -27,10 +32,16 @@ function sumOfNumbers(arrayOfNumbers) {
  * @param {Array} arrayOfNumbers the array containing even or non-even numbers
  * @returns number the count of even numbers
  */
-function countEvenNumbers(arrayOfNumbers) {
-    return arrayOfNumbers.length;
+function countEvenNumbers(arrayOfNumbers){
+  count = 0
+  for (let i = 0; i < arrayOfNumbers.length; i++){
+    if (arrayOfNumbers[i] % 2 == 0){   //checks for divisibility by 2
+      count++;  //icreases count by 1 if divisibility check is true
+    }
+  }
+    return count; //returns the number of even figures in the array
 }
-// assignment.countEvenNumbers = countEvenNumbers;
+assignment.countEvenNumbers = countEvenNumbers;
 
 /**
  * Challenge - 3

@@ -1,4 +1,4 @@
-const assignment = require('./assignment.js');
+YARNconst assignment = require('./assignment.js');
 
 const { sumOfNumbers, countEvenNumbers, celsiusToFahrenheit } = assignment;
 
